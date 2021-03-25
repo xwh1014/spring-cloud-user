@@ -9,11 +9,16 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-#        namespace: c4411dc3-cc92-4506-bf2a-192e98dd07a1
+        namespace: c4411dc3-cc92-4506-bf2a-192e98dd07a1
 #        #南昌机房NC
-#        cluster-name: NC
+        cluster-name: JX
   application:
     name: user-center
 server:
-  port: 9098
-#  port: 9090
+  port: 9097
+  #  port: 9090
+logging:
+  level:
+    com.example.usercenter: debug
+rocketmq:
+  name-server: 127.0.0.1:9876
