@@ -12,6 +12,17 @@ spring:
         namespace: c4411dc3-cc92-4506-bf2a-192e98dd07a1
 #        #南昌机房NC
         cluster-name: JX
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        input:
+          destination: stream-test-topic
+          group: suiyi
+        my-input:
+          destination: stream-my-topic
+          group: suiyi2
   application:
     name: user-center
 server:
